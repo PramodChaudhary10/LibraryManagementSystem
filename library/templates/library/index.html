@@ -1,0 +1,94 @@
+{% extends 'library/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block main-content %}
+<div class="row">
+    <div class="side">
+        <!-- Category of Books -->
+        <div class="single" style="float: right;">
+            <h3 class="side-title" style="text-align:center;">Category</h3>
+            <ul class="list-unstyled">
+                <li><a href="">Romance</a></li>
+                <li><a href="">Sci-Fi</li>
+                <li><a href="">Horror</a></li>
+                <li><a href="">Action</a></li>
+                <li><a href="">Business</a></li>
+                <li><a href="">History</a></li>
+                <li><a href="">Atronomy</a></li>
+            </ul>
+        </div>
+
+        <h2>New Added Book</h2>
+        <hr>
+        <div class="content-1" ALIGN="justify" style="height:230px; width: 1400px;">
+            <img class="logo" src="{% static 'library/images/womaninblack.jpg' %}" ALIGN="left"
+                style="height: 200px; width: 150px; padding: 0px 8px;">
+
+            <h3>WOMAN IN BLACK BY SUSAN HILL</h3>
+            The Woman in Black is a ghost story by Susan Hill, in which Arthur Kipps relates his haunting
+            experiences at
+            Eel Marsh House.
+
+            The tale begins on Christmas Eve, when Arthur's step-children invite him to tell a ghost story. Arthur
+            is too
+            disturbed by his memories to share his story aloud, so he writes it down.
+
+            In his story, a young Arthur Kipps, a junior solicitor, is sent to settle the affairs of Alice Drablow.
+            He
+            sees a woman dressed in black at her funeral, though apparently no one else does. At Eel Marsh House, a
+            house
+            beyond a causeway, Arthur is haunted by noises and sightings of the woman. Eventually a local man, Sam
+            Daily,
+            reveals the full story of how Alice Drablow's sister, Jennet, haunts the house. He explains that a child
+            dies
+            each time the woman in black is seen. At the end of the story, Arthur sees the woman in black again and
+            his
+            wife and son die in a terrible accident.
+
+            The Woman in Black is a ghost story about heartbreak and revenge.
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <h2>Popular Books</h2>
+    <h5>From 2000 to 2020 A.D</h5>
+
+    <h2 class="w3-center">Slides of popular books.</h2>
+
+    <div class="w3-content w3-display-container">
+        <img class="mySlides" src="{% static 'library/images/harry_potter_books1.webp' %}"
+            style="width:100%; height: 500px;">
+        <img class="mySlides" src="{% static 'library/images/science.jpg' %}" style="width:100%;height: 500px; ">
+        <img class="mySlides" src="{% static 'library/images/coldwar.jpg' %}" style="width:100%;height: 500px;">
+        <img class="mySlides" src="{% static 'library/images/images.jfif' %}" style="width:100%;height: 500px;">
+
+        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</div>
+
+{% endblock main-content %}
