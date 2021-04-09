@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="{% static 'library/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'library/css/responsive.css' %}" />
+    <title>
+        Library Management Sytem | {% block title %}{% endblock title %}
+    </title>
+</head>
+
+<body>
+    <!-- Logo Section -->
+    <div class="header">
+        <img class="Logo-head" src="{% static 'library/images/Logo.png' %}" ALIGN="left">
+        <h1 class="head-Lib">LIBRARY MANAGEMENT SYSTEM</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">Books</a>
+        <a href="about.html">About us</a>
+        <a href="#">Contact us</a>
+        <a href="Register & login/signin.html" class="right">New user? | Sign in</a>
+        <a href="Register & login/login.html" class="right">Log in</a>
+    </div>
+
+    <!-- Contains all Other part of pages -->
+    {% block main-content %} {% endblock main-content %}
+
+
+
+    <!-- Footer Section Start -->
+    <footer class="footer">
+        <div class="footer__addr">
+            <h1 class="footer__logo">Herald College Kathmandu</h1>
+            <address>
+                Naxal, Kathmandu, Nepal.<br>
+                Phone: 9801022637, 01-4010120, 01-4010121
+                <br>
+
+                <a class="footer__btn" href="info@heraldcollege.edu.np">Email Us</a>
+            </address>
+        </div>
+
+        <ul class="footer__nav">
+            <li class="nav__item">
+                <h2 class="nav__title">Data structure & algorithm</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Full course</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Half course</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__item nav__item--extra">
+                <h2 class="nav__title">Business Management</h2>
+
+                <ul class="nav__ul nav__ul--extra">
+                    <li>
+                        <a href="#">Taxation</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Marketting</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Communication</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Accounting</a>
+                    </li>
+
+                    <li>
+                        <a href="#"></a>
+                    </li>
+
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav__item">
+                <h2 class="nav__title">Legal</h2>
+
+                <ul class="nav__ul">
+                    <li>
+                        <a href="#">Privacy Policy</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Terms of Use</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="legal">
+            <p>&copy; 2021. All rights reserved.</p>
+    </footer>
+    <!-- Footer Section End -->
+
+</body>
+
+</html>
