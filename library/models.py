@@ -4,9 +4,11 @@ from django.db import models
 
 
 class Student(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=150)
+    date = models.DateField()
     enrollment = models.CharField(max_length=40)
     branch = models.CharField(max_length=40)
+    section = models.CharField(max_length=10)
 
 
 class Book(models.Model):
@@ -16,6 +18,9 @@ class Book(models.Model):
         ('comics', 'Comics'),
         ('biography', 'Biographie'),
         ('history', 'History'),
+        ('science', 'Science'),
+        ('engineering', 'Engineering'),
+        ('IT', 'IT'),
     ]
     name = models.CharField(max_length=30)
     isbn = models.PositiveIntegerField()
