@@ -60,7 +60,13 @@
         The Woman in Black is a ghost story about heartbreak and revenge.
        <br>
        <br>
-         <button style="float: right; margin-right:25px; background-color: green; color: white;">Request this book</button>
+        <script>
+                        function clickAlert() {
+                     alert("Yor request has been sent to Admin. You can only recieve book after admin confirmation.");
+                        }
+                    </script>
+
+                    <input type="button" style="background-color: #00FF00;border-radius:9px; float: right; margin-right:25px; color: white; color: black;" onclick="clickAlert()" value="Request this book">
       <form style="margin-left: 160px;">
   <input type="checkbox" id="wish" name="vehicle1" value="Wishlist">
   <input type="submit" value="Wishlist">

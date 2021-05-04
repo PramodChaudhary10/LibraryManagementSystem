@@ -7,36 +7,14 @@
 <link rel="stylesheet" href="Style/style.css" >
 <link rel="stylesheet" href="Style/responsive.css" >
 <link rel="stylesheet" href="Style/Style02.css" />
-<link rel="stylesheet" href="Style/lightslider.css">
-<script type="text/javascript" src="Style/jquery.js"></script>
-<script type="text/javascript" src="Style/lightslider.js"></script>
+
 <style>
-.btn-group button {
-  background-color: #04AA6D; /* Green background */
-  border: 6px solid green; /* Green border */
-  color: white; /* White text */
-  padding: 20px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
-}
-
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: 	#006400;
+.booklist {
+  width: 800px;
+  
+  background-color: white;
 }
 </style>
-</head>
 <div class="header">
     <!-- Logo -->
     <img class="Logo-head" src="Pictures/Logo.png" ALIGN="left">
@@ -52,42 +30,30 @@
   <a href="#" class="right">Welcome, Admin</a>
   <a href="Register & login/signin.html" class="right"></a>
 </div>
+</head>
+
 <body>
-<h1 style="text-align: center;">Admin Dashboard</h1>
+<h2 style="text-align: center;">Edit Book</h2>
 <hr>
-<br>
-<br>
-<br>
-<br>
+<h3>List of added books</h3>
 
-<div class="btn-group" style="width:100%">
-
-  <form method="get" action="AddBook.html">
-    <button type="submit" style="width:50%">Add Book</button>
-  </form>
-  
-  <form method="get" action="EditBook.html">
-  <button type="submit" style="width:50%">Edit Book</button>
-  </form>
-  
-  <form method="get" action="FineBook.html">
-  <button type="submit" style="width:50%">Pending Returns</button>
-  </form>
-
-  <form method="get" action=".html">
-  <button type="submit" style="width:50%">Requested Book</button>
-  </form>
-
+<p></p>
+<div class= booklist>
+<ol>
+  <li>Rich Dad Poor Dad</li>
+  <li>Think and Grow Rich</li>
+  <li>One Life one Chance</li>
+  <li>Success</li>
+  <li>The Subtitle Art Of Not Giving A Fuck</li>
+  <li>How Successful People Think</li>
+  <li>motivation and Personality</li>
+  <li>The Power Of Positive thinking</li>
+  <li>Harry Porter</li>
+  <li>Power Of Subconscious Mind</li>
+</ol> 
 </div>
-
-<div class="btn-group" style="width:100%; text-align: center;">
-  <form method="get" action=".html">
-  <button type="submit" style="width:25%; margin-left:580px;">Extend Due Date</button>
-  </form>
-</div>
-
-<br>
-<br>
+<button style="margin-left: 340px; font-size: 18px;">Edit</button>
+<button style="font-size: 18px;">Remove</button>
 <br>
 <br>
 <br>

@@ -7,36 +7,23 @@
 <link rel="stylesheet" href="Style/style.css" >
 <link rel="stylesheet" href="Style/responsive.css" >
 <link rel="stylesheet" href="Style/Style02.css" />
-<link rel="stylesheet" href="Style/lightslider.css">
-<script type="text/javascript" src="Style/jquery.js"></script>
-<script type="text/javascript" src="Style/lightslider.js"></script>
+
 <style>
-.btn-group button {
-  background-color: #04AA6D; /* Green background */
-  border: 6px solid green; /* Green border */
-  color: white; /* White text */
-  padding: 20px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
-
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: 	#006400;
+tr:nth-child(even) {
+  background-color: #dddddd;
 }
 </style>
-</head>
 <div class="header">
     <!-- Logo -->
     <img class="Logo-head" src="Pictures/Logo.png" ALIGN="left">
@@ -52,40 +39,73 @@
   <a href="#" class="right">Welcome, Admin</a>
   <a href="Register & login/signin.html" class="right"></a>
 </div>
+</head>
+
 <body>
-<h1 style="text-align: center;">Admin Dashboard</h1>
-<hr>
+<h2 style="text-align: center;">Pending Returns</h2>
+
+<table>
+  <tr>
+    <th>Book name</th>
+    <th>Requested By</th>
+    <th>Due date</th>
+    <th>Late days</th>
+    <th>Fine</th>
+  </tr>
+  <tr>
+    <td>Rich Dad Poor Dad</td>
+    <td>Nirmal Tandulkar</td>
+    <td>5/01/2021</td>
+    <td>1</td>
+    <td>Rs.20</td>
+  </tr>
+  <tr>
+    <td>Harry Potter</td>
+    <td>Shyam Joshi</td>
+    <td>5/01/2021</td>
+    <td>1</td>
+    <td>Rs.20</td>
+  </tr>
+  <tr>
+    <td>Algorithm</td>
+    <td>Hari Bahadur</td>
+    <td>4/28/2021</td>
+    <td>4</td>
+    <td>Rs.80</td>
+  </tr>
+  <tr>
+    <td>Astronomy</td>
+    <td>Ram Thapa</td>
+    <td>4/29/2021</td>
+    <td>3</td>
+    <td>Rs.60</td>
+  </tr>
+  <tr>
+    <td>One Life One Chance</td>
+    <td>Geeta Joshi</td>
+    <td>4/30/2021</td>
+    <td>2</td>
+    <td>Rs.40</td>
+  </tr>
+  <tr>
+    <td>Think and Grow Rich </td>
+    <td>Manisha Koirala</td>
+    <td>5/01/2021</td>
+    <td>1</td>
+    <td>Rs.20</td>
+  </tr>
+</table>
+<button style="float: right; width: 180px; background-color: red; color: black; font-size: 18px;">Charge Fine</button>
 <br>
 <br>
 <br>
 <br>
-
-<div class="btn-group" style="width:100%">
-
-  <form method="get" action="AddBook.html">
-    <button type="submit" style="width:50%">Add Book</button>
-  </form>
-  
-  <form method="get" action="EditBook.html">
-  <button type="submit" style="width:50%">Edit Book</button>
-  </form>
-  
-  <form method="get" action="FineBook.html">
-  <button type="submit" style="width:50%">Pending Returns</button>
-  </form>
-
-  <form method="get" action=".html">
-  <button type="submit" style="width:50%">Requested Book</button>
-  </form>
-
-</div>
-
-<div class="btn-group" style="width:100%; text-align: center;">
-  <form method="get" action=".html">
-  <button type="submit" style="width:25%; margin-left:580px;">Extend Due Date</button>
-  </form>
-</div>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
