@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Library management system</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../Style/style.css" >
+<link rel="stylesheet" href="../Style/responsive.css" >
+<link rel="stylesheet" href="../Style/Style02.css" />
+<link rel="stylesheet" href="../Style/lightslider.css">
+<script type="text/javascript" src="../Style/jquery.js"></script>
+<script type="text/javascript" src="../Style/lightslider.js"></script>
+<div class="header">
+
+<style>
+.Abook{
+  float: left;
+  margin-top: 150px;
+  margin-left: 350px;
+  margin-right: 50px;
+  margin-bottom: 57px;
+}
+form{
+  margin-top: 50px;
+}
+.save{
+  float:right;
+  margin-right:336px;
+  margin-top: 20px;
+  background-color:	#00FF00;
+  width: 120px;
+  height:34px;
+  font-size: 19px;
+}
+
+</style>
+    <!-- Logo -->
+    <img class="Logo-head" src="../Pictures/Logo.png" ALIGN="left">
+  <h1 class="head-Lib">LIBRARY MANAGEMENT SYSTEM</h1>
+</div>
+
+<!-- Nav Bar -->
+<div class="navbar">
+  <a href="../index.html" class="active">Home</a>
+  <a href="../Book view.html">Books</a>
+  <a href="../about.html">About us</a>
+  <a href="../contact us.html">Contact us</a>
+  <a href="#" class="right">Welcome, Admin</a>
+  <a href="../Register & login/signin.html" class="right"></a>
+</div>
+
+
+<body>
+<h1 style="text-align: center;">Update Book</h1>
+<hr>
+<br>
+
+</head>
+
+<div class="Abook">
+
+   <img src="../Pictures/uploadpic.png" width=200>
+   
+   <div></div>
+   <button>Upload Book Pic</button>
+   <button>Upload PDF</button>
+</div> 
+
+<form>
+  <label for="fname">Book Name</label><br>
+  <input type="text" style=" width:600px;" id="fname" name="fname"><br>
+  <label for="lname" style="height:200px; width:600px;">Book Description</label><br>
+  <input type="text" style="height:200px; width:600px;" id="lname" name="lname"><br>
+  <label for="lname">Category</label><br>
+  <input type="text" style=" width:600px;" id="lname" name="lname"><br>
+  <label for="lname">Book Author</label><br>
+  <input type="text" style=" width:600px;" id="lname" name="lname"><br>
+  <label for="lname">Book Edition</label><br>
+  <input type="text" style=" width:600px;" id="lname" name="lname"><br>
+
+  <script>
+                        function clickAlert() {
+                     alert("Book added successfully.");
+                        }
+</script>
+  <input type="submit" class="save" onclick="clickAlert()" value="Add" >
+</form> 
+
+</body>
+</html>

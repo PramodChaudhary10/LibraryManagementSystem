@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Library management system</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../Style/style.css" >
+<link rel="stylesheet" href="../Style/responsive.css" >
+<link rel="stylesheet" href="../Style/Style02.css" />
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.fine{
+  float: right; 
+  width: 180px; 
+  background-color: green; 
+  color: black; 
+  font-size: 18px;
+}
+</style>
+<div class="header">
+    <!-- Logo -->
+    <img class="Logo-head" src="../Pictures/Logo.png" ALIGN="left">
+  <h1 class="head-Lib">LIBRARY MANAGEMENT SYSTEM</h1>
+</div>
+
+<!-- Nav Bar -->
+<div class="navbar">
+  <a href="../index.html" class="active">Home</a>
+  <a href="../Book view.html">Books</a>
+  <a href="../about.html">About us</a>
+  <a href="../contact us.html">Contact us</a>
+  <a href="#" class="right">Welcome, Admin</a>
+  <a href="../Register & login/signin.html" class="right"></a>
+</div>
+
+<script type="text/javascript">  
+            function selects(){  
+                var ele=document.getElementsByName('chk');  
+                for(var i=0; i<ele.length; i++){  
+                    if(ele[i].type=='checkbox')  
+                        ele[i].checked=true;  
+                }  
+            }  
+            function deSelect(){  
+                var ele=document.getElementsByName('chk');  
+                for(var i=0; i<ele.length; i++){  
+                    if(ele[i].type=='checkbox')  
+                        ele[i].checked=false;  
+                      
+                }  
+            }             
+        </script>  
+</head>
+
+<body>
+<h2 style="text-align: center;">Requested Books</h2>
+<input type="button" onclick='selects()' value="Select all"/>  
+<input type="button" onclick='deSelect()' value="Deselect all"/>  
+
+<table>
+  <tr>
+    <th>Book name</th>
+    <th>Student ID</th>
+    <th>Requested by</th>
+     
+    
+  </tr>
+  <tr>
+  
+   <td><input type="checkbox" name="chk">Rich Dad Poor Dad</td>
+    <td>101</td>
+    <td>Nirmal Tandulkar</td>
+  </tr>
+  <tr>
+     <td><input type="checkbox" name="chk">Harry Potter</td>
+    <td>102</td>
+    <td>Shyam Joshi</td>
+  </tr>
+  <tr>
+     <td><input type="checkbox" name="chk">Algorithm</td>
+    <td>103</td>
+    <td>Hari Bahadur</td>
+  </tr>
+  <tr>
+     <td><input type="checkbox" name="chk">Astronomy</td>
+    <td>104</td>
+    <td>Ram Thapa</td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="chk">One Life One Chance</td>
+    <td>105</td>
+    <td>Geeta Joshi</td>
+  </tr>
+  <tr>
+     <td><input type="checkbox" name="chk">Think and Grow Rich</td>
+     <td>106</td>
+    <td>Manisha Koirala</td>
+  </tr>
+</table>
+  
+  <script>
+                        function clickAlert() {
+                     alert("Book approved successfully to respective student.");
+                        }
+                    </script>
+
+                    <input type="button" style="float: right; font-size: 18px;" onclick="clickAlert()" value="Approve">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer__addr">
+    <h1 class="footer__logo">Herald College Kathmandu</h1>
+    <address>
+      Naxal, Kathmandu, Nepal.<br>
+      Phone: 9801022637, 01-4010120, 01-4010121
+   <br>
+          
+      <a class="footer__btn" href="info@heraldcollege.edu.np">Email Us</a>
+    </address>
+  </div>
+  
+  <ul class="footer__nav">
+    <li class="nav__item">
+      <h2 class="nav__title">Data structure & algorithm</h2>
+
+      <ul class="nav__ul">
+        <li>
+          <a href="#">Full course</a>
+        </li>
+
+        <li>
+          <a href="#">Half course</a>
+        </li>
+      </ul>
+    </li>
+    
+    <li class="nav__item nav__item--extra">
+      <h2 class="nav__title">Business Management</h2>
+      
+      <ul class="nav__ul nav__ul--extra">
+        <li>
+          <a href="#">Taxation</a>
+        </li>
+        
+        <li>
+          <a href="#">Marketting</a>
+        </li>
+        
+        <li>
+          <a href="#">Communication</a>
+        </li>
+        
+        <li>
+          <a href="#">Accounting</a>
+        </li>
+        
+        <li>
+          <a href="#"></a>
+        </li>
+        
+        <li>
+          <a href="#"></a>
+        </li>
+      </ul>
+    </li>
+    
+    <li class="nav__item">
+      <h2 class="nav__title">Legal</h2>
+      
+      <ul class="nav__ul">
+        <li>
+          <a href="#">Privacy Policy</a>
+        </li>
+        
+        <li>
+          <a href="#">Terms of Use</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  
+  <div class="legal">
+    <p>&copy; 2021. All rights reserved.</p>
+</footer>
+</html>
