@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="Style/style.css" >
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="Style/responsive.css" >
 <link rel="stylesheet" href="Style/Style02.css" />
 <link rel="stylesheet" href="Style/lightslider.css">
@@ -12,6 +13,16 @@
 <script type="text/javascript" src="Style/lightslider.js"></script>
 </head>
 <body>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
 
 <div class="header">
     <!-- Logo -->
@@ -25,13 +36,20 @@
   <a href="Book view.html">Books</a>
   <a href="about.html">About us</a>
   <a href="contact us.html">Contact us</a>
+  <button class="open-button" onclick="openForm()"><span class="badge">1</span><i class="material-icons" style="font-size:30px;">notifications</i></button>
+<div class="form-popup" id="myForm">
+  <form action="" class="form-container">
+  <p style="color:white;">Due date exceeded for book Harry Potter.</p><hr>
+  <p style="color:white;">Fine - Rs.20</p>
+  <a href="https://esewa.com.np/#/home" style="color:white; border: 2px black; margin-left:70px; color: yellow; font-size:20px;">Pay Online<br></a><br>
+    <button type="button" class="btn cancel" onclick="closeForm()" >Close</button>
+  </form>
+  </div>
   <a href="Register & login/signin.html" class="right">New user?  | Sign in</a>
   <a href="Register & login/login.html" class="right">Log in</a>
 </div>
-
 <div class="row">
   <div class="side">
-
     <!-- Category of Books -->
     <div class="single" style="float: right;">
       <h3 class="side-title" style="text-align:center;">Category</h3>
@@ -201,13 +219,13 @@
 <!-- Footer -->
 <footer class="footer">
   <div class="footer__addr">
-    <h1 class="footer__logo">Herald College Kathmandu</h1>
+    <h1 class="footer__logo">Library Management System</h1>
     <address>
       Naxal, Kathmandu, Nepal.<br>
-      Phone: 9801022637, 01-4010120, 01-4010121
+      Phone: 1234567890, 01-12345678 01-12345678
    <br>
           
-      <a class="footer__btn" href="info@heraldcollege.edu.np">Email Us</a>
+      <a class="footer__btn" href="info@lms.edu.np">Email Us</a>
     </address>
   </div>
   
