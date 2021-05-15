@@ -10,7 +10,7 @@ class StudentExtra(models.Model):
     # used in issue book
 
     def __str__(self):
-        return self.user.first_name+'['+str(self.enrollment)+']'
+        return self.user.first_name
 
     @property
     def get_name(self):
@@ -36,7 +36,7 @@ class Book(models.Model):
         max_length=30, choices=catchoice, default='education')
 
     def __str__(self):
-        return str(self.name) + (self.id) + "["+str(self.isbn)+']'
+        return str(self.name) + "["+str(self.isbn)+']'
 
 
 def get_expiry():
