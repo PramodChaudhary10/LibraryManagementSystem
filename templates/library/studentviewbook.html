@@ -19,7 +19,7 @@
                 <th scope="col">ISBN</th>
                 <th scope="col">Author</th>
                 <th scope="col">Category</th>
-                <th scope="col">Action</th>
+                <!-- <th scope="col">Action</th> -->
             </tr>
         </thead>
         <tbody>
@@ -30,12 +30,24 @@
                 <td>{{book.isbn}}</td>
                 <td>{{book.author}}</td>
                 <td>{{book.category}}</td>
-                <td>
-                    <form action="#" method="post" class="d-inline">
-                        {% csrf_token %}
-                        <input type="submit" value="Request" class="btn btn-primary">
+                <!-- <td>
+                    {% if request.user.is_authenticated %}
+                    {% if advanced_item %}
+                    <a href="/studentviewbook" class="btn btn-warning shadow px-5 py-2 ms-4">Cancel</a>
+                    {% else %}
+                    <form action="/requestbooks" class="d-inline" method="GET">
+                        <input type="hidden" name="book_id" value="{{book.id}}" id="book_id">
+                        <button type="submit" class="btn btn-primary shadow px-5 py-2">Request</button>
                     </form>
-                </td>
+                    {% endif %}
+                    {% else %}
+                    <form action="/requestbooks" class="d-inline">
+                        <input type="hidden" name="book_id" value="{{book.id}}" id="book_id">
+                        <button type="submit" class="btn btn-primary shadow px-5 py-2">Request</button>
+                    </form>
+
+                    {% endif %}
+                </td> -->
             </tr>
             {% endfor %}
         </tbody>

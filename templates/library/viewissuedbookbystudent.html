@@ -1,149 +1,58 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
 
+<head>
+  <meta charset="utf-8">
+  <title>LMS || Student book Issued</title>
+</head>
 
-<style media="screen">
-table.redTable {
-border: 2px solid #A40808;
-background-color: #EEE7DB;
-width: 100%;
-text-align: center;
-border-collapse: collapse;
-}
-table.redTable td, table.redTable th {
-border: 1px solid #AAAAAA;
-padding: 3px 2px;
-}
-table.redTable tbody td {
-font-size: 13px;
-}
-table.redTable tr:nth-child(even) {
-background: #F5C8BF;
-}
-table.redTable thead {
-background: #A40808;
-}
-table.redTable thead th {
-font-size: 19px;
-font-weight: bold;
-color: #FFFFFF;
-text-align: center;
-border-left: 2px solid #A40808;
-}
-table.redTable thead th:first-child {
-border-left: none;
-}
-
-table.redTable tfoot {
-font-size: 13px;
-font-weight: bold;
-color: #FFFFFF;
-background: #A40808;
-}
-table.redTable tfoot td {
-font-size: 13px;
-}
-table.redTable tfoot .links {
-text-align: right;
-}
-table.redTable tfoot .links a{
-display: inline-block;
-background: #FFFFFF;
-color: #A40808;
-padding: 2px 8px;
-border-radius: 5px;
-}
-</style>
-
-  </head>
-  <body>
+<body>
   {% include "library/navbarstudent.html" %}<br><br>
-  <h3 class="p-3 mb-2 bg-primary text-white" style = 'font-size: 50px;text-align:center;'>Book Issued To You !</h3>
+  <h1 class="p-3 mb-2 bg-success text-white text-center font-weight-bold">Issued Book to Student </h1>
+  {% if li1 %}
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th>SN</th>
+        <th>Student Name</th>
+        <th>Student Enrollment</th>
+        <th>Book Name</th>
+        <th>Book Author</th>
+        <th>Issue Date</th>
+        <th>Expiry Date</th>
+        <th>Fine</th>
 
-<div class="row">
-
-  <div class="col-lg-6" style="padding-right:0px;">
-    {% if li1%}
-    <table class="redTable">
-  <thead>
-  <tr>
-  <th>Name</th>
-  <th>Enrollment</th>
-  <th>Branch</th>
-    <th>Book Name</th>
-      <th>Book Author</th>
-  </tr>
-  </thead>
-  <tfoot>
-  <tr>
-  <td colspan="5">
-  <div class="links"></div>
-  </td>
-  </tr>
-  </tfoot>
-  <tbody>
-    {% for t in li1 %}
-<tr>
-  <td>  {{t.0}}</td>
-  <td>  {{t.1}}</td>
-  <td>  {{t.2}}</td>
-  <td>  {{t.3}}</td>
-  <td>  {{t.4}}</td>
-</tr>
-
-    {% endfor %}
-  </tbody>
-  </table>
-
-</div>
-
-<div class="col-lg-6" style="padding-left:0px;">
-
-      <table class="redTable">
-    <thead>
-    <tr>
-    <th>Issue Date</th>
-    <th>Expiry Date</th>
-    <th>Fine</th>
-    </tr>
+      </tr>
     </thead>
-    <tfoot>
-    <tr>
-    <td colspan="5">
-    <div class="links"></div>
-    </td>
-    </tr>
-    </tfoot>
     <tbody>
-      {% for t in li2 %}
-<tr>
-  <td>  {{t.0}}</td>
-  <td>  {{t.1}}</td>
-  <td>  {{t.2}}</td>
-</tr>
-
-
-
-
+      <tr>
+        {% for t in li1 %}
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{t.0}}</td>
+        <td>{{t.1}}</td>
+        <td>{{t.2}}</td>
+        <td>{{t.3}}</td>
+        {% endfor %}
+        {% for t in li2 %}
+        <td>{{t.0}}</td>
+        <td>{{t.1}}</td>
+        <td>{{t.2}}</td>
+      </tr>
       {% endfor %}
     </tbody>
-    </table>
-    {%else%}
-    <h1> No book Issued to you</h1>
-    {%endif%}
+  </table>
+  {% else %}
+  <div class="container">
+    <div class="row  my-3">
+      <div class="col-sm-6 offset-sm-3">
+        <h4>No Issued Books are available</h4>
+      </div>
+    </div>
+  </div>
+  {% endif %}
 
-</div></div>
-
-
-
-
-
-
-<br><br><br><br><br><br>
-<br><br><br>
+  <br><br><br><br><br><br><br><br><br>
   {% include "library/footer.html" %}
-  </body>
+</body>
+
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>LMS || Request Books</title>
+</head>
+
+<body>
+    {% include "library/navbarstudent.html" %}
+    <br>
+    <br>
+    <h1 class="p-3 mb-2 bg-success text-white text-center font-weight-bold">Request Book from Student </h1>
+    {% if req_list%}
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">SN</th>
+                <th scope="col">Book Name</th>
+                <th scope="col">ISBN</th>
+                <th scope="col">User</th>
+                <th scope="col">Student</th>
+                <th scope="col">Branch</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rl in req_list %}
+            <tr>
+                <th scope="row">{{forloop.counter}}</th>
+                <td>{{rl.books.name}}</td>
+                <td>{{rl.books.isbn}}</td>
+                <td>{{rl.students.author}}</td>
+                <td>{{rl.students.category}}</td>
+                <td>{{rl.students.category}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {%else%}
+    <div class="container">
+        <div class="row  my-3">
+            <div class="col-sm-6 offset-sm-3">
+                <h4>No Requested books</h4>
+            </div>
+        </div>
+    </div>
+    {%endif%}
+
+    <br><br><br><br><br><br><br><br><br>
+    {% include "library/footer.html" %}
+</body>
+
+</html>

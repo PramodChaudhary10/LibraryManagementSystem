@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Book, StudentExtra, IssuedBook
+from .models import Book, RequestBook, StudentExtra, IssuedBook
 # Register your models here.
 
 
@@ -22,3 +22,8 @@ class IssuedBookAdmin(admin.ModelAdmin):
 
 
 admin.site.register(IssuedBook, IssuedBookAdmin)
+
+
+@admin.register(RequestBook)
+class RequestBookModel(admin.ModelAdmin):
+    list_display = ['id', 'user', 'book']

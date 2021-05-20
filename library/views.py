@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from . import forms, models
+from django.db.models import Q
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import Group
 from django.contrib import auth
@@ -115,6 +116,32 @@ def del_books(request, id):
         return HttpResponseRedirect('/viewbook')
 
 
+@login_required
+def request_book(request):
+    user = request.user
+    book_id = request.GET.get('book_id')
+    print(book_id)
+    books = models.Book.objects.get(id=book_id)
+    models.RequestBook(user=user, books=books).save()
+    return redirect('/studentviewbook')
+
+
+def remove_request(request):
+    if request.method == 'GET':
+        book_id = request.GET['book_id']
+        c = models.RequestBook.objects.get(
+            Q(books=book_id) & Q(user=request.user))
+        c.delete()
+    return redirect('/studentviewbook')
+
+
+def request_list(request):
+    if request.user.is_authenticated:
+        user = request.user
+        req_list = models.RequestBook.objects.filter(user=user)
+        return render(request, 'library/requestedlist.html', {'req_list': req_list})
+
+
 @login_required(login_url='adminlogin')
 @user_passes_test(is_admin)
 def viewbook_view(request):
@@ -124,6 +151,8 @@ def viewbook_view(request):
 
 def studentbook_view(request):
     books = models.Book.objects.all()
+    # advanced_item = models.RequestBook.objects.filter(
+    #     Q(books=books.id) & Q(user=request.user)).exists()
     return render(request, 'library/studentviewbook.html', {'books': books})
 
 
@@ -228,6 +257,6 @@ def contactus_view(request):
             name = sub.cleaned_data['Name']
             message = sub.cleaned_data['Message']
             send_mail(str(name)+' || '+str(email), message, EMAIL_HOST_USER,
-                      ['wapka1503@gmail.com'], fail_silently=False)
+                      ['np03a190266@heraldcollege.edu.np'], fail_silently=False)
             return render(request, 'library/contactussuccess.html')
     return render(request, 'library/contactus.html', {'form': sub})

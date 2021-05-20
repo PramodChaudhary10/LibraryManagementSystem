@@ -38,12 +38,16 @@ urlpatterns = [
     path('deletebooks/<int:id>/', views.del_books, name='deletebook'),
     path('updatebooks/<int:id>/', views.upd_books, name='updatebook'),
     path('viewbook', views.viewbook_view),
-    path('studentviewbook', views.studentbook_view),
+    path('studentviewbook', views.studentbook_view, name='studentviewbook'),
     path('issuebook', views.issuebook_view),
     path('viewissuedbook', views.viewissuedbook_view),
     path('viewstudent', views.viewstudent_view),
     path('viewissuedbookbystudent', views.viewissuedbookbystudent),
     path('aboutus', views.aboutus_view),
     path('contactus', views.contactus_view),
+
+    path('requestbooks/<int:id>/', views.request_book, name='requestbook'),
+    path('cancelrequest/<int:id>/', views.remove_request, name='cacelrequest'),
+    path('requestlist', views.request_list, name='requestlist'),
 
 ]
